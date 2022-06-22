@@ -1,0 +1,6 @@
+# dependencies
+node_modules
+site/node_modules
+
+# compiled output
+dist

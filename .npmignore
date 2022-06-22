@@ -1,0 +1,18 @@
+#tests
+test
+
+#build tools
+.travis.yml
+.jenkins.yml
+.codeclimate.yml
+.tsconfig.json
+stats.html
+rollup.config.js
+
+#main dir
+
+site
+package
+
+#editor settings
+.vscode
