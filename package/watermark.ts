@@ -3,6 +3,7 @@ import { defaultSettings } from "./config";
 
 /** 用户设置变量 */
 let globalSetting: IWaterMark = defaultSettings;
+
 /** 监听Dom方法 */
 const MutationObserver = window.MutationObserver;
 
@@ -34,6 +35,7 @@ let domChangeCallback = function (records: MutationRecord[]) {
     loadMark(globalSetting);
   }
 };
+
 let watermarkDom = new MutationObserver(domChangeCallback);
 
 const option = {
@@ -46,7 +48,7 @@ const option = {
 };
 
 /* 加载水印 */
-function loadMark(setting?: IWaterMark) {
+function loadMark(setting?: Partial<IWaterMark>) {
   globalSetting = { ...defaultSettings, ...setting };
 
   /* 如果元素存在则移除*/

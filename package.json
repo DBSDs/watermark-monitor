@@ -7,7 +7,8 @@
     "test": "jest",
     "build": "rollup -c",
     "start": "rollup -c -w",
-    "dev": "npm run dev --workspace=website"
+    "dev": "npm run dev --workspace=website",
+    "build:site": "npm run build --workspace=website"
   },
   "keywords": [
     "watermark",

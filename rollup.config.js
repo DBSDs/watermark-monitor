@@ -15,6 +15,9 @@ import {
   visualizer
 } from "rollup-plugin-visualizer";
 import typescript from 'rollup-plugin-typescript2'
+import {
+  types
+} from "@babel/core";
 
 const plugins = [
   nodeResolve({
@@ -61,6 +64,7 @@ const prodPlugins = plugins.concat([
   visualizer(),
   typescript({
     // rollupCommonJSResolveHack: false,
+    outDir: './types',
     clean: true,
   })
 ]);
@@ -79,10 +83,18 @@ const withBase = (config) => Object.assign({}, base, config);
 
 export default [{
     output: [{
-      name: "WaterMark",
-      file: "dist/watermark.js",
-      format: "umd",
-    }, ].map(makeOutput),
+        name: "WaterMark",
+        file: "dist/watermark.js",
+        format: "umd",
+      }, {
+        file: "dist/watermark.es.js",
+        format: "es",
+      },
+      {
+        file: "dist/watermark.cjs.js",
+        format: "cjs",
+      },
+    ].map(makeOutput),
     plugins: prodPlugins,
   },
   // {

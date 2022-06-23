@@ -14,8 +14,8 @@ export const defaultSettings: IWaterMark = {
   watermark_color: "black",
   watermark_fontsize: "18px",
   watermark_alpha: 0.15, //
-  watermark_width: 400,
-  watermark_height: 300,
+  watermark_width: 200,
+  watermark_height: 100,
   watermark_angle: 15,
   watermark_parent_width: 0,
   watermark_parent_height: 0,
