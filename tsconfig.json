@@ -2,6 +2,6 @@
   "compilerOptions": {
     "declaration": true,
   },
-  "include": ["src", "package"],
+  "include": ["website", "package"],
   "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"]
 }

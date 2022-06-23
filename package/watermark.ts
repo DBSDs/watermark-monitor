@@ -18,16 +18,17 @@ let domChangeCallback = function (records: MutationRecord[]) {
 
   if (
     (records.length === 1 &&
-      ((records[0].removedNodes[0] as any)["id"] ===
-        globalSetting.watermark_id ||
-        String((records[0].target.parentNode as any)["id"]).includes(
-          globalSetting.watermark_prefix
+      (records[0].removedNodes[0]?.["id"] === globalSetting.watermark_id ||
+        String(
+          (records[0].target.parentNode?.["id"]).includes(
+            globalSetting.watermark_prefix
+          )
         ))) ||
     (records.length === 1 &&
-      (records[0].target as any)["id"] === globalSetting.watermark_id) ||
+      records[0].target?.["id"] === globalSetting.watermark_id) ||
     (records.length === 2 &&
-      (records[0].target as any)["id"] === globalSetting.watermark_id) ||
-    ((records[0].removedNodes[0] as any)["id"] === globalSetting.watermark_id &&
+      records[0].target?.["id"] === globalSetting.watermark_id) ||
+    (records[0].removedNodes[0]?.["id"] === globalSetting.watermark_id &&
       records.every((item) => !item.addedNodes.length))
   ) {
     loadMark(globalSetting);

@@ -1,6 +1,6 @@
 
 
-#watermark-monitor
+# watermark-monitor
 
 网页水印组件，给你的网站上添加水印，防止被删除。
 
@@ -15,14 +15,25 @@
 
 ## 安装
 
-```
-// npm
+```bash
 npm install watermark-monitor --save
+```
+
+## 用法
+
+```js
+import watermark from "watermark-monitor";
+
+watermark.loadMark();
+watermark.removeMark();
 ```
 
 ##  线上Demo
 
-正在开发中...
+[在线预览](https://dbsds.github.io/watermark-mointor/)
+
+
+---
 
 ##  感谢
 

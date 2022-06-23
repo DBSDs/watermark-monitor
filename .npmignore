@@ -6,12 +6,12 @@ test
 .jenkins.yml
 .codeclimate.yml
 .tsconfig.json
+.github
 stats.html
 rollup.config.js
 
 #main dir
-
-site
+website
 package
 
 #editor settings

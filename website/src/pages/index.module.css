@@ -21,3 +21,9 @@
   align-items: center;
   justify-content: center;
 }
+
+.input {
+  border: 1px solid #ced4da;
+  height: 30px;
+  border-radius: 0.3rem;
+}
