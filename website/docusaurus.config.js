@@ -10,7 +10,7 @@ const config = {
   title: 'watermark-monitor',
   tagline: '网页水印组件，给你的网站上添加水印，防止被删除。',
   url: 'https://dbsds.github.io',
-  baseUrl: '/watermark-mointor/',
+  baseUrl: '/watermark-monitor/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',

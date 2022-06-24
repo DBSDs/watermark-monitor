@@ -30,7 +30,7 @@ watermark.removeMark();
 
 ##  线上Demo
 
-[在线预览](https://dbsds.github.io/watermark-mointor/)
+[在线预览](https://dbsds.github.io/watermark-monitor/)
 
 
 ---
