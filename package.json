@@ -44,19 +44,6 @@
     "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-typescript2": "^0.32.1",
     "rollup-plugin-visualizer": "^5.5.4",
-    "typescript": "^4.7.4",
-    "@docusaurus/module-type-aliases": "2.0.0-beta.21"
-  },
-  "dependencies": {
-    "docusaurus-plugin-sass": "^0.2.2",
-    "@docusaurus/core": "2.0.0-beta.21",
-    "@docusaurus/preset-classic": "2.0.0-beta.21",
-    "@mdx-js/react": "^1.6.22",
-    "clsx": "^1.1.1",
-    "prism-react-renderer": "^1.3.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "sass": "^1.53.0",
-    "watermark-monitor": "^1.0.1"
+    "typescript": "^4.7.4"
   }
 }

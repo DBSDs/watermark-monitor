@@ -25,7 +25,8 @@
     "watermark-monitor": "^1.0.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.0.0-beta.21"
+    "@docusaurus/module-type-aliases": "2.0.0-beta.21",
+    "docusaurus-plugin-sass": "^0.2.2"
   },
   "browserslist": {
     "production": [
