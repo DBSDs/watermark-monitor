@@ -38,3 +38,4 @@ watermark.removeMark();
 ##  感谢
 
 - [watermark-dom](https://github.com/saucxs/watermark-dom)
+- [watermark](https://github.com/pansyjs/watermark)
