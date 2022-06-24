@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import styles from "./styles.module.css";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
-// import watermark from "../../../..";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 function HomepageHeader(props) {
