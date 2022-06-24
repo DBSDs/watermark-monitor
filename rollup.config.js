@@ -15,9 +15,7 @@ import {
   visualizer
 } from "rollup-plugin-visualizer";
 import typescript from 'rollup-plugin-typescript2'
-import {
-  types
-} from "@babel/core";
+
 
 const plugins = [
   nodeResolve({
