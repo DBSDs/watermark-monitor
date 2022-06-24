@@ -5,9 +5,9 @@
   "main": "dist/watermark.js",
   "scripts": {
     "test": "jest",
-    "build": "rollup -c",
-    "start": "rollup -c -w",
-    "dev": "npm run dev --workspace=website",
+    "start:pck": "rollup -c -w",
+    "build:pck": "rollup -c",
+    "dev:site": "npm run dev --workspace=website",
     "build:site": "npm run build --workspace=website"
   },
   "keywords": [

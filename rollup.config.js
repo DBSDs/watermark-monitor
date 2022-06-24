@@ -83,18 +83,10 @@ const withBase = (config) => Object.assign({}, base, config);
 
 export default [{
     output: [{
-        name: "WaterMark",
-        file: "dist/watermark.js",
-        format: "umd",
-      }, {
-        file: "dist/watermark.es.js",
-        format: "es",
-      },
-      {
-        file: "dist/watermark.cjs.js",
-        format: "cjs",
-      },
-    ].map(makeOutput),
+      name: "WaterMark",
+      file: "dist/watermark.js",
+      format: "umd",
+    }].map(makeOutput),
     plugins: prodPlugins,
   },
   // {

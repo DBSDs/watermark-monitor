@@ -15,7 +15,10 @@ export default function Home() {
     >
       <BrowserOnly fallback={<div>Loading...</div>}>
         {() => {
-          return <HomepageHeader />;
+          const watermark = require("../../..").default;
+          console.log(watermark, "dd");
+          watermark.loadMark();
+          return <HomepageHeader watermark={watermark} />;
         }}
       </BrowserOnly>
     </Layout>

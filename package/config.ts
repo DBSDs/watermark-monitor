@@ -9,7 +9,7 @@ export const defaultSettings: IWaterMark = {
   watermark_rows: 0,
   watermark_cols: 0,
   watermark_x_space: 100,
-  watermark_y_space: 200,
+  watermark_y_space: 100,
   watermark_font: "微软雅黑",
   watermark_color: "black",
   watermark_fontsize: "18px",

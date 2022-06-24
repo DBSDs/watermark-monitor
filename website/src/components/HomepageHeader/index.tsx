@@ -2,17 +2,15 @@ import React, { useEffect } from "react";
 import styles from "./styles.module.css";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
-import watermark from "../../../..";
+// import watermark from "../../../..";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-function HomepageHeader() {
-  console.log(window.location.href, 11);
+function HomepageHeader(props) {
+  const { watermark } = props;
   const { siteConfig } = useDocusaurusContext();
   const [on, setOn] = React.useState<boolean>(true);
   const [input, setInput] = React.useState<string>("");
-  useEffect(() => {
-    // watermark.loadMark();
-  }, []);
+
   return (
     <>
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
@@ -24,7 +22,7 @@ function HomepageHeader() {
               className="button button--secondary button--lg"
               onClick={(e) => {
                 if (on) {
-                  // watermark.removeMark();
+                  watermark.removeMark();
                 } else {
                   watermark.loadMark({ watermark_txt: input });
                 }
