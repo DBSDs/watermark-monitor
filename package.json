@@ -9,6 +9,7 @@
     "dev": "npm run dev --workspace=website",
     "build:site": "npm run build --workspace=website"
   },
+  "homepage": "https://github.com/DBSDs/watermark-monitor",
   "keywords": [
     "watermark",
     "webpage"
