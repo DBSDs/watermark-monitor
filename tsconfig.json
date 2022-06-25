@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "declaration": true,
+    "types": ["node", "@docusaurus/module-type-aliases", "@docusaurus/theme-classic"],
+    "esModuleInterop": true,
+    "jsx": "react",
+    "lib": ["DOM", "es2020"],
   },
-  "include": ["package"],
-  "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"]
+  "include": ["package", "website"],
+  "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"],
 }

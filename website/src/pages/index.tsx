@@ -15,8 +15,8 @@ export default function Home() {
     >
       <BrowserOnly fallback={<div>Loading...</div>}>
         {() => {
-          const watermark = require("watermark-monitor").default;
-          console.log(watermark, "dd");
+          const watermark = require("../../../package/index").default;
+          console.log(watermark, "w");
           watermark.loadMark();
           return <HomepageHeader watermark={watermark} />;
         }}

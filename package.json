@@ -1,13 +1,12 @@
 {
   "name": "watermark-monitor",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/watermark.js",
   "scripts": {
     "test": "jest",
-    "start:pck": "rollup -c -w",
-    "build:pck": "rollup -c",
-    "dev:site": "npm run dev --workspace=website",
+    "build": "rollup -c",
+    "dev": "npm run dev --workspace=website",
     "build:site": "npm run build --workspace=website"
   },
   "keywords": [
