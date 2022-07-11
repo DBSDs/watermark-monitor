@@ -8,13 +8,17 @@ import watermark from "../../../package/index";
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
-  watermark.loadMark();
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <HomepageHeader watermark={watermark} />;
+      <BrowserOnly fallback={<div>Loading...</div>}>
+        {() => {
+          watermark.loadMark();
+          return <HomepageHeader watermark={watermark} />;
+        }}
+      </BrowserOnly>
     </Layout>
   );
 }

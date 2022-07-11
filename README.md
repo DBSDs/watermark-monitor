@@ -1,7 +1,11 @@
 
 
-# 🌟watermark-monitor
+<div align="center">
+  
+  [![logo.png](https://i.postimg.cc/nrYL0TvH/logo.png)](https://postimg.cc/hQvgGLyw)
+</div>
 
+---
 
 <div align="center">
 
@@ -16,7 +20,6 @@
 ---
 
 ## ✡️特性
-
 - 支持自定义水印文字，开箱即用
 - 监听水印Dom - 防止他人删除水印dom或修改样式属性
 - 使用 TypeScript 编写，提供完善的类型定义
@@ -25,7 +28,11 @@
 ## 📦安装
 
 ```bash
+// npm
 npm install watermark-monitor --save
+
+//yarn
+yarn add watermark-monitor
 ```
 
 ## 🔨用法
@@ -33,23 +40,25 @@ npm install watermark-monitor --save
 ```js
 import watermark from "watermark-monitor";
 
-watermark.loadMark();
-watermark.removeMark();
+// 加载配置 && 更新配置
+watermark.loadMark();  
+
+// 移除水印
+watermark.removeMark(); 
 ```
 
 ##  👀线上Demo
 
-[在线预览](https://dbsds.github.io/watermark-monitor/)
+* [在线预览](https://dbsds.github.io/watermark-monitor/)
 
+## 🚀最新进展
 
-## 最新进展
+* 2020/7/12: [fix] 修复了编辑样式可能会使水印消失的缺陷
 
-* 2020/7/12: [fix] 修复了编辑样式可能会使水印消失的缺陷，可以在ssr端直接调用
-
-* future: 覆盖单元测试用例 
+* 未来: 覆盖单元测试用例 
 ---
 
-## 感谢
+## ❤️感谢
 
 - [watermark-dom](https://github.com/saucxs/watermark-dom)
 - [watermark](https://github.com/pansyjs/watermark)
