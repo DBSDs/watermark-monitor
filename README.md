@@ -32,6 +32,11 @@ watermark.removeMark();
 [在线预览](https://dbsds.github.io/watermark-monitor/)
 
 
+## 最新进展
+
+* 2020/7/12: [fix] 修复了编辑样式可能会使水印消失的缺陷，可以在ssr端直接调用
+
+* future: 覆盖单元测试用例 
 ---
 
 ## 感谢

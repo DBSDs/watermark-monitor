@@ -8,7 +8,7 @@ function HomepageHeader(props) {
   const { watermark } = props;
   const { siteConfig } = useDocusaurusContext();
   const [on, setOn] = React.useState<boolean>(true);
-  const [input, setInput] = React.useState<string>("");
+  const [input, setInput] = React.useState<string>("测试水印");
 
   return (
     <>
@@ -39,6 +39,7 @@ function HomepageHeader(props) {
         <label>请输入水印内容：</label>
         <input
           className={styles.input}
+          value={input}
           onChange={(e) => setInput(e.target["value"])}
         />
       </div>

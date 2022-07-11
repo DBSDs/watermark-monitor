@@ -4,9 +4,6 @@ import { defaultSettings } from "./config";
 /** 用户设置变量 */
 let globalSetting: IWaterMark = defaultSettings;
 
-/** 监听Dom方法 */
-const MutationObserver = window.MutationObserver;
-
 let forceRemove = false;
 
 // 监听dom是否被移除或者改变属性的回调函数
@@ -16,7 +13,6 @@ let domChangeCallback = function (records: MutationRecord[]) {
 
     return;
   }
-
   if (
     (records.length === 1 &&
       (records[0].removedNodes[0]?.["id"] === globalSetting.watermark_id ||
@@ -28,15 +24,14 @@ let domChangeCallback = function (records: MutationRecord[]) {
     (records.length === 1 &&
       records[0].target?.["id"] === globalSetting.watermark_id) ||
     (records.length === 2 &&
-      records[0].target?.["id"] === globalSetting.watermark_id) ||
+      (records[0].target?.["id"] === globalSetting.watermark_id ||
+        records[0].target?.["id"].includes(globalSetting.watermark_prefix))) ||
     (records[0].removedNodes[0]?.["id"] === globalSetting.watermark_id &&
       records.every((item) => !item.addedNodes.length))
   ) {
     loadMark(globalSetting);
   }
 };
-
-let watermarkDom = new MutationObserver(domChangeCallback);
 
 const option = {
   attributeFilter: ["style"],
@@ -47,8 +42,19 @@ const option = {
   subtree: true,
 };
 
+let MutationObserver: {
+  new (callback: MutationCallback): MutationObserver;
+  prototype: MutationObserver;
+};
+
+let watermarkDom: MutationObserver;
+
 /* 加载水印 */
 function loadMark(setting?: Partial<IWaterMark>) {
+  MutationObserver = MutationObserver ?? window.MutationObserver;
+
+  watermarkDom = watermarkDom ?? new MutationObserver(domChangeCallback);
+
   globalSetting = { ...defaultSettings, ...setting };
 
   /* 如果元素存在则移除*/
@@ -67,13 +73,11 @@ function loadMark(setting?: Partial<IWaterMark>) {
     : document.body;
 
   /* 获取页面宽度*/
-  // let page_width = Math.max(watermark_hook_element.scrollWidth,watermark_hook_element.clientWidth) - defaultSettings.watermark_width/2;
   let page_width = Math.max(
     watermark_hook_element.scrollWidth,
     watermark_hook_element.clientWidth
   );
   /* 获取页面最大长度*/
-  // let page_height = Math.max(watermark_hook_element.scrollHeight,watermark_hook_element.clientHeight,document.documentElement.clientHeight)-defaultSettings.watermark_height/2;
   let page_height = Math.max(
     watermark_hook_element.scrollHeight,
     watermark_hook_element.clientHeight
