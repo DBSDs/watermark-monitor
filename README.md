@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  [![logo.png](https://i.postimg.cc/nrYL0TvH/logo.png)](https://postimg.cc/hQvgGLyw)
+  [![logo-3.png](https://i.postimg.cc/0N8f82kn/logo-3.png)](https://postimg.cc/v4N9hy6x)
 </div>
 
 ---
