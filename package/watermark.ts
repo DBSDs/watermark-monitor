@@ -34,7 +34,7 @@ let domChangeCallback = function (records: MutationRecord[]) {
 };
 
 const option = {
-  attributeFilter: ["style"],
+  attributeFilter: ["style", "hidden", "class"],
   attributeOldValue: true,
   attributes: true,
   characterData: true,
